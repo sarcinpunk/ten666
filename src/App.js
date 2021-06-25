@@ -1,12 +1,21 @@
-import React from "react";
-import "./App.css";
-import { Homepage } from "./containers/homepage";
-import { Parallax, ParallaxProvider   } from 'react-scroll-parallax';
+import React from 'react';
+import './App.css';
 
-function App(props) {
-  return <ParallaxProvider>  <Homepage />
-        
-          </ParallaxProvider>;
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages';
+import SigninPage from './pages/signin';
+import pdfPages from './pages/pdf'; 
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path='/' component={Home} exact />
+        <Route path='/signin' component={SigninPage} exact />
+        <Route path='/PDF' component={pdfPages} exact/>
+      </Switch>
+    </Router>
+  );
 }
 
-export default App; 
+export default App;

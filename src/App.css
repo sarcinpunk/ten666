@@ -36,9 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.modelBackground {
-  opacity: 0;
-  pointer-events: none;
-  
-} 
